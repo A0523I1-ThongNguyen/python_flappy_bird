@@ -30,7 +30,7 @@ def check_collision(pipes):
      if bird_react.top <=-75 or bird_react.bottom >= 650:
                return False
      return True
-# hàm tạo hiệu ứng xoay cho chim
+# method of creating effects for birds
 def rotate_bird(parBird):
      new_bird = pygame.transform.rotozoom(parBird,-bird_move*3,1)
      return new_bird
@@ -139,7 +139,7 @@ while True:
     if game_active:
           # Bird       
           bird_move += gravity
-          # hiệu ứng chim chuyển động 
+          # effects in motion
           rotated_bird = rotate_bird(bird)
           bird_react.centery += bird_move
           screen.blit(rotated_bird,bird_react) 
